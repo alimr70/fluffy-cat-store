@@ -6,7 +6,6 @@ class ProductList extends Component {
   render() {
     const { match } = this.props;
     const { filter } = match.params;
-    console.log(filter);
     if (filter === undefined) {
       return (
         <React.Fragment>
