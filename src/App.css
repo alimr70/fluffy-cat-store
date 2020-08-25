@@ -1,0 +1,578 @@
+:root {
+  --mainBlue: #2a2a72;
+  --lightBlue: #009ffd;
+  --mainWhite: #f3f3f3;
+  --mainDark: #232538;
+  --mainYellow: #ffa400;
+  --mainGreen: #91ce3f;
+  --mainRed: #e30000;
+}
+
+*,
+::after,
+::before {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: opensans, "Helvetica Neue", Helvetica, Helvetica, Arial, sans-serif;
+  background: var(--mainWhite);
+  color: var(--mainDark);
+  margin: 0;
+  font-size: 1rem;
+  font-weight: 400;
+  line-height: 1.5;
+  color: #212529;
+  text-align: left;
+  background-color: #fff;
+}
+
+a {
+  color: #007bff;
+  text-decoration: none;
+  background-color: transparent;
+}
+
+ul {
+  margin: 0;
+  list-style: none;
+}
+
+.text-bright {
+  color: var(--lightBlue);
+}
+
+.cart-Item {
+  cursor: pointer;
+  font-size: 1.2rem;
+  color: var(--mainYellow);
+}
+
+.container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin: 0.5rem 0;
+}
+
+
+/* -------------------------------------------------------------------------- */
+
+
+/*                                   Nav Bar                                  */
+
+
+/* -------------------------------------------------------------------------- */
+
+nav {
+  display: block;
+  background: var(--lightBlue);
+}
+
+.main-nav {
+  background: var(--lightBlue);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0.5rem 1rem;
+}
+
+.nav-container {
+  display: block;
+}
+
+.nav-link {
+  color: var(--mainWhite);
+  font-size: 1.3rem;
+  text-transform: capitalize;
+}
+
+.logo {
+  height: 3rem;
+}
+
+.nav-links {
+  background: var(--lightBlue);
+  padding: 0;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  transition: all 0.2s linear;
+}
+
+.nav-links a {
+  display: block;
+  font-size: 1.5rem;
+  font-weight: 700;
+  padding: 1rem 1.5rem;
+  transition: all 0.3s linear;
+}
+
+.nav-links a:hover {
+  background-color: #007bff;
+}
+
+.nav-links-btn {
+  width: 24px;
+  height: 24px;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+}
+
+.nav-links-btn:focus {
+  outline: none;
+}
+
+#menu {
+  display: none;
+}
+
+#close {
+  display: none;
+}
+
+.open-menu {
+  display: block !important;
+  transform: translateY(0) !important;
+}
+
+@media (max-width: 900px) {
+  nav {
+    padding: 0 1rem;
+  }
+  .nav-links {
+    position: absolute;
+    right: 0;
+    left: 0;
+    flex-direction: column;
+    transform: translateY(-150%);
+    transition: all 0.2s linear;
+  }
+  #menu {
+    display: block;
+  }
+}
+
+@media (max-width: 700px) {}
+
+@media (max-width: 550px) {}
+
+
+/* -------------------------------------------------------------------------- */
+
+
+/*                                 End Nav Bar                                */
+
+
+/* -------------------------------------------------------------------------- */
+
+
+/* -------------------------------------------------------------------------- */
+
+
+/*                                   Product                                  */
+
+
+/* -------------------------------------------------------------------------- */
+
+.card {
+  display: flex;
+  flex-direction: column;
+  width: 20%;
+  padding: 0.5rem 0.5rem;
+  border: 1px solid #c3c3c3;
+  border-radius: 3px;
+  margin: 0.5rem 0.5rem;
+  transition: all 0.3s linear;
+}
+
+@media (max-width: 900px) {
+  .card {
+    width: 30%;
+  }
+}
+
+@media (max-width: 700px) {
+  .card {
+    width: 40%;
+  }
+}
+
+@media (max-width: 550px) {
+  .card {
+    width: 70%;
+  }
+}
+
+.card-img {
+  max-width: 100%;
+  max-height: 190px;
+  transition: all 0.3s linear;
+}
+
+.card:hover {
+  border: 0.04 solid rgba(0, 0, 0, 0.2);
+  box-shadow: 2px 2px 5px 0 rgba(0, 0, 0, 0.2);
+}
+
+.img-container {
+  align-self: center;
+  overflow: hidden;
+  padding: 0.5rem;
+  min-height: 220px;
+}
+
+.img-container:hover .card-img {
+  transform: scale(1.1);
+}
+
+.cart-btn {
+  font-weight: 800;
+  font-size: 1rem;
+  background: var(--mainGreen);
+  border: none;
+  color: var(--mainWhite);
+  transition: all 0.3s linear;
+}
+
+.cart-btn:hover {
+  cursor: pointer;
+}
+
+.card-title {
+  font-size: 0.85rem;
+  font-weight: 700;
+  margin: 0.3rem 0;
+}
+
+.card-price {
+  font-size: 1.5rem;
+  font-weight: 700;
+  margin: auto 0 0 0;
+}
+
+.card-price span {
+  font-size: 1rem;
+}
+
+.rating {
+  overflow: hidden;
+  height: 23px;
+  margin: 0.8rem 0;
+}
+
+.rating-empty {
+  background-image: url("./rating-empty.svg");
+  width: 74px;
+  height: 15.41px;
+  display: inline-block;
+  background-repeat: no-repeat;
+}
+
+.rating-full {
+  top: 0;
+  display: block;
+  background-image: url("./rating-full.svg");
+  height: inherit;
+  background-repeat: no-repeat;
+}
+
+
+/* -------------------------------------------------------------------------- */
+
+
+/*                                 End Product                                */
+
+
+/* -------------------------------------------------------------------------- */
+
+
+/* -------------------------------------------------------------------------- */
+
+
+/*                                   Button                                   */
+
+
+/* -------------------------------------------------------------------------- */
+
+.btn-blue {
+  text-transform: capitalize;
+  font-size: 1.4rem;
+  background: transparent;
+  border: 0.05rem solid var(--mainBlue);
+  border-color: var(--mainBlue);
+  color: var(--mainBlue);
+  border-radius: 0.5rem;
+  padding: 0.2rem 0.5rem;
+  cursor: pointer;
+  margin: 0.2rem 0.5rem 0.2rem 0;
+  transition: all 0.5s ease-in-out;
+}
+
+.btn-yellow {
+  border-color: var(--mainYellow);
+  color: var(--mainYellow);
+}
+
+.btn-blue:hover {
+  background: var(--mainBlue);
+  color: var(--mainWhite);
+}
+
+.btn-yellow:hover {
+  background: var(--mainYellow);
+}
+
+.btn-blue:focus,
+.btn-yellow:focus {
+  outline: none;
+}
+
+
+/* -------------------------------------------------------------------------- */
+
+
+/*                                 End Button                                 */
+
+
+/* -------------------------------------------------------------------------- */
+
+
+/* -------------------------------------------------------------------------- */
+
+
+/*                                    Modal                                   */
+
+
+/* -------------------------------------------------------------------------- */
+
+.modal-container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.3);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+#modal {
+  width: 90%;
+  background: var(--mainWhite);
+  padding: 2rem;
+  text-align: center;
+  text-transform: capitalize;
+}
+
+.modal-img {
+  max-width: 100%;
+  max-height: 300px;
+  overflow: hidden;
+}
+
+
+/* -------------------------------------------------------------------------- */
+
+
+/*                                  End Modal                                 */
+
+
+/* -------------------------------------------------------------------------- */
+
+
+/* -------------------------------------------------------------------------- */
+
+
+/*                                   Details                                  */
+
+
+/* -------------------------------------------------------------------------- */
+
+.product-details {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+}
+
+.detail-section {
+  display: flex;
+  flex-direction: column;
+  width: 40%;
+  padding: 0 1rem;
+  margin: 1rem;
+  text-transform: capitalize;
+}
+
+.detail-img {
+  display: block;
+  width: 200px;
+  max-width: 100%;
+}
+
+@media (max-width: 900px) {
+  .product-details {
+    flex-direction: column;
+  }
+  .detail-section {
+    width: 60%;
+    align-self: center;
+  }
+}
+
+
+/* -------------------------------------------------------------------------- */
+
+
+/*                                 End Details                                */
+
+
+/* -------------------------------------------------------------------------- */
+
+
+/* -------------------------------------------------------------------------- */
+
+
+/*                                    Cart                                    */
+
+
+/* -------------------------------------------------------------------------- */
+
+
+/* Cart Column */
+
+.cart-column {
+  display: flex;
+  justify-content: center;
+  text-align: center;
+}
+
+.cart-heading {
+  width: 15%;
+}
+
+.cart-list {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+}
+
+@media (max-width: 900px) {
+  .cart-column {
+    display: none;
+  }
+}
+
+
+/* Cart Item */
+
+.cart-item {
+  padding: 2rem 0;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  text-transform: capitalize;
+}
+
+.cart-item-img {
+  width: auto;
+  height: 5rem;
+}
+
+.cart-item-column {
+  width: 15%;
+}
+
+.cart-item-column span {
+  font-weight: 700;
+}
+
+.product-font {
+  font-size: 0.9rem;
+  font-weight: 700;
+}
+
+.cart-item-amount {
+  margin: 0 1rem;
+}
+
+.cart-item-amount-btn {
+  padding: 0.8rem 1.2rem;
+  margin: 0 0.1rem;
+  background: transparent;
+  text-transform: capitalize;
+  font-size: 0.8rem;
+  color: var(--mainDark);
+  border-radius: 0;
+  border: 0.1rem solid var(--mainDark);
+  justify-content: center;
+}
+
+.cart-item-amount-btn:hover {
+  cursor: pointer;
+  background: var(--mainDark);
+  color: var(--mainWhite);
+}
+
+@media (max-width: 900px) {
+  .cart-item {
+    flex-direction: column;
+    border: 1px solid #c3c3c3;
+    border-radius: 3px;
+    margin-top: 0.5rem;
+    width: 80%;
+    align-self: center;
+  }
+  .cart-item-column {
+    width: 60%;
+    margin: 0.5rem 0;
+  }
+}
+
+
+/* Cart Total */
+
+.cart-total {
+  text-align: center;
+}
+
+.text-title {
+  font-family: opensans, "Helvetica Neue", Helvetica, Helvetica, Arial, sans-serif;
+  text-transform: capitalize;
+  font-weight: 700;
+  text-align: center;
+}
+
+.text-title span {
+  font-weight: 400;
+}
+
+.clear-cart-btn {
+  padding: 1rem 1.5rem;
+  color: var(--mainRed);
+  letter-spacing: 0.2rem;
+  text-transform: uppercase;
+  font-weight: 700;
+  font-size: 1rem;
+  background: transparent;
+  border: solid 5px var(--mainRed);
+  border-radius: 0.1rem;
+  cursor: pointer;
+}
+
+.clear-cart-btn:focus {
+  outline: none;
+}
+
+
+/* -------------------------------------------------------------------------- */
+
+
+/*                                  End Cart                                  */
+
+
+/* -------------------------------------------------------------------------- */
