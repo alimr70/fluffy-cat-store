@@ -20,7 +20,7 @@ class Modal extends Component {
                     <h3>item added to the cart</h3>
                     <img src={img} className="modal-img " alt="Product" />
                     <h3>{title}</h3>
-                    <h2 className="text-muted">price: {price} EGP</h2>
+                    <h2>price: {price} EGP</h2>
                     <Link to="/">
                       <button className="btn-blue" onClick={() => closeModal()}>
                         store

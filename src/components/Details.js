@@ -33,10 +33,8 @@ class Details extends Component {
                   <p>
                     brand: <span className="text-uppercase">{brand}</span>
                   </p>
-                  <p className="text-capitalize font-weight-bold mt-4 mb-0">
-                    description:
-                  </p>
-                  <p className="text-muted lead">{description}</p>
+                  <p>description:</p>
+                  <p>{description}</p>
                   <div>
                     <Link to="/">
                       <button className="btn-blue">back to products</button>

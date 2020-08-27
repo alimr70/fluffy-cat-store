@@ -1,19 +1,19 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import PayPalButton from "./PayPalButton";
+import FawryPayButton from "./FawryPayButton";
 
-function CartTotals({ value, history }) {
+function CartTotals({ value }) {
   const { cartSubTotal, cartTax, cartTotal, clearCart } = value;
 
   return (
     <React.Fragment>
       <div className="container">
         <div className="cart-total">
-          <PayPalButton
-            total={cartTotal}
-            clearCart={clearCart}
-            history={history}
-          />
+          <div className="payment-methods">
+            <h3>Available Payment Methods: </h3>
+            <FawryPayButton />
+          </div>
           <h3 className="text-title">
             <span>subtotal:</span> {cartSubTotal} EGP
           </h3>

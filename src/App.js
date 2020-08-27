@@ -8,6 +8,8 @@ import Details from "./components/Details";
 import Cart from "./components/cart/Cart";
 import Default from "./components/Default";
 import Modal from "./components/Modal";
+import Success from "./components/cart/Success";
+import Failure from "./components/cart/Failure";
 
 class App extends Component {
   render() {
@@ -19,6 +21,8 @@ class App extends Component {
           <Route path="/products/:filter" component={ProductList} />
           <Route path="/details" component={Details} />
           <Route path="/cart" component={Cart} />
+          <Route path="/success" component={Success} />
+          <Route path="/failure" component={Failure} />
           <Route component={Default} />
         </Switch>
         <Modal />
