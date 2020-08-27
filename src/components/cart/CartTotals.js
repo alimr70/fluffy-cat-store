@@ -1,6 +1,5 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import PayPalButton from "./PayPalButton";
 import FawryPayButton from "./FawryPayButton";
 
 function CartTotals({ value }) {
